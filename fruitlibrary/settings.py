@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-s3sg^4$tnlu*fe9ewy%_f^oxps3f70&-r%bkp6vc3a-_az*8$v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://git.heroku.com/api-fruitlibrary.git']
+ALLOWED_HOSTS = ['https://api-fruitlibrary.herokuapp.com/']
 
 
 # Application definition
