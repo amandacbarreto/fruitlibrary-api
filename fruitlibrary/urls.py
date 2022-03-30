@@ -19,7 +19,15 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 
+from rest_framework import routers
+from core.api import viewsets as coreviewsets
+#criando nosso objeto de rota
+route = routers.DefaultRouter()
+route.register(r'regions', coreviewsets.RegionViewSet, basename="Region")
+route.register(r'fruits', coreviewsets.FruitViewSet, basename="Fruit")
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls)
+    path('admin/', admin.site.urls),
+    path('', include(route.urls))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
