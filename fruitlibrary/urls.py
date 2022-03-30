@@ -13,7 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.conf.urls.defaults import patterns, include, url
+from django.conf.urls import url, include
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
