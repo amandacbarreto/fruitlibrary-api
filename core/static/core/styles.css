@@ -1,0 +1,219 @@
+@font-face {
+  font-family: fontstack;
+  font-style: normal;
+  font-weight: 300;
+  src: local('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+}
+
+:root{
+	--color-text: #303030;
+	--color-text-secondary:#54595F;
+	--e-global-color-text: #7A7A7A;
+	--e-global-color-accent: #3AA362;
+	--e-global-color-6eb11108: #6EC1E4;
+	--e-global-color-381b298f: #61CE70;
+	--e-global-color-2b092cd9: #4054B2;
+	--e-global-color-70c509fc: #23A455;
+	--color-title: #000;
+	--color-page-background: #FFF;
+	--e-global-color-7e5aba59: #25A423;
+	--e-global-color-ad039bf: #88BC23;
+	--e-global-typography-primary-font-weight: bold;
+	--e-global-typography-secondary-font-weight: bold;
+	--e-global-typography-accent-font-weight: normal;
+	--e-global-typography-d63ff03-font-weight: bold;
+	--e-global-typography-d63ff03-text-transform: lowercase;
+	--e-global-typography-d63ff03-font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.destaque{
+  background: #25d366;
+}
+
+body {
+  font-size: 100%;
+  background: var(--color-page-background);
+	font-family: fontstack,sans-serif;
+  color: var(--color-text);
+}
+
+.cabecalho{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1240px;
+  height: 105px;
+  box-sizing: border-box;
+}
+
+.cabecalho-imagem {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0%;
+  min-width: 201px;
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.cabecalho-imagem img {
+  max-width: 201px;
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: normal;
+  font-family: Open Sans,sans-serif;
+  letter-spacing: normal;
+  word-spacing: normal;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.cabecalho-menu {
+  display: flex;
+  justify-content: flex-end;
+  vertical-align: center; 
+  width: 100%;
+  padding: 0 15px;
+  position: relative;
+}
+
+.cabecalho-menu-item{
+  list-style: none;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 0 10px;
+  text-transform: uppercase;
+  display: block;
+  text-decoration: none;
+}
+
+.cabecalho-menu-item a{
+  list-style-type: none;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+
+.conteudo {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 1160px;
+  padding: 0;
+  width: 100%;
+  margin: 40px auto;
+  font-size: 15px;
+}
+
+.conteudo-info-geral {
+  display: flex;
+  flex-direction: column;
+  color: rgba(85,85,85,1);
+}
+
+.conteudo-info-geral h1{
+  font-size: 58px;
+	font-weight: 600;
+	text-transform: none;
+	line-height: 1.2em;
+	letter-spacing: -3px;
+  color: var(--color-title);
+}
+
+.conteudo-info-geral h2{
+  color: #54595F;
+  font-size: 22px;
+  font-weight: 300;
+  text-transform: none;
+  letter-spacing: 0px;
+  margin-bottom: 10px;
+  line-height: 1.1;
+}
+
+.conteudo-desafio {
+  
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1240px;
+}
+
+.conteudo-desafio-solicitado {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  color: rgba(85,85,85,1);
+}
+
+.resultado-desafio {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 44%;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  color: rgba(85,85,85,1);
+}
+
+.conteudo-desafio-solicitado h1, .resultado-desafio h1{
+  
+  color: #88BC23;
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: -0.3px;
+  margin-bottom: 10px;
+  line-height: 1.1;
+}
+
+.resultado-desafio ul{
+  padding-left: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.resultado-desafio ul a{
+  color: #25A423;
+}
+
+.rodape{
+  background-color: #25A423;
+  text-align: center;
+  padding: 20px 0;
+  color: #FFF;
+  font-weight: 300;
+  border: none;
+}
+
+.rodape a{
+  color:#FFF;
+  font-weight: 600;
+}
+
+

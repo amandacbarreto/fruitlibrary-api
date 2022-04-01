@@ -1,0 +1,77 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'core/styles.css' %}">
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio Frexco</title>
+
+</head>
+
+<body>
+
+  <header class="cabecalho">
+    <div class="cabecalho-imagem">
+      <img src="https://frexco.com.br/wp-content/uploads/2020/04/logo-frexco-slogan-HDP-300x77-1.png" alt="Logo da Frexco">
+    </div>
+    <div class="cabecalho-menu">
+      <div class="cabecalho-menu-item">
+        <a href="https://api-fruitlibrary.herokuapp.com/">Início</a>
+      </div>
+      <div class="cabecalho-menu-item">
+        <a href="{% url 'region_list' %}">API</a>
+      </div>
+      <div class="cabecalho-menu-item">  
+        <a  href="https://github.com/amandacbarreto/fruitlibrary-api.git">Repositório Github</a>
+      </div> 
+    </div>
+  </header>
+
+  <main class="conteudo">
+
+    <div class="conteudo-info-geral">
+      <h1>Desafio Tech em Python</h1>
+      <h2>Desafio realizado durante a primeira etapa do processo seletivo para vaga de Estágio em Automação e Desenvolvimento de Software na Frexco</h2>
+    </div>      
+    <div class="conteudo-desafio">
+      
+        <div class="conteudo-desafio-solicitado">  
+          <div class="conteudo-desafio-solicitado-titulo"> 
+            <h1>Desafio proposto</h1> 
+          </div>
+          <blockquote>
+            - Criar uma API usando a linguagem Python, frameworks: Django e Django Rest Framework. <br/>
+            - A API deverá realizar a comunicação com um banco de dados SQL qualquer. <br/>
+            - O banco deverá ter pelo menos duas tabelas: <br/>
+            - Uma tabela chamada “Region” que conterá apenas uma coluna “name” com informação dos nomes das regiões do Brasil ( Norte, Nordeste, etc.). <br/>
+            - Uma tabela chamada “Fruit” que conterá colunas “name” (o nome da fruta) e uma coluna de associação por chave estrangeira (foreign key) com a tabela “Region” associando cada fruta a uma região existente na primeira tabela. <br/>
+            - Para cada tabela, a API deve conter os quatro métodos GET, POST, PUT e DELETE.
+          </blockquote>
+        </div>  
+        
+        <div class="resultado-desafio">
+            <h1>API Desenvolvida</h1>
+            <p>Para consultas gerais (GET) ou criação (PUT):</p>
+            <ul>
+              <li><a href="{% url 'region_list' %}">{% url 'region_list' %}</a> para regiões</li>
+              <li><a href="{% url 'fruit_list' %}">{% url 'fruit_list' %}</a> para frutas</li>
+            </ul>
+            <p>Para consulta específica (GET), atualização (UPDATE) ou exclusão (DELETE) de elementos específicos:</p><br/>
+            <ul>
+              <li><a href="{% url 'region_list' %}">{% url 'region_list' %}id</a> para regiões</li>
+              <li><a href="{% url 'fruit_list' %}">{% url 'fruit_list' %}id</a> para frutas</li>
+            </ul>
+        </div>
+
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <p>Desenvolvido por <a href="https://github.com/amandacbarreto/">Amanda Barreto</a></p>
+  </footer>
+</body>
+
+</html>

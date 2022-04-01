@@ -3,8 +3,8 @@ from core.api.viewsets import (index_api, Regions, RegionInformation, Fruits, Fr
 
 urlpatterns = [
     path('', index_api),
-    path('region/', Regions.as_view(), name="Region list"),
-    path('region/<int:pk>/', RegionInformation.as_view(), name="Region information"),
-    path('fruit/', Fruits.as_view(), name="Fruit list"),
-    path('fruit/<int:pk>/', FruitInformation.as_view(), name="Fruit information"),
+    path('region/', Regions.as_view(), name="region_list"),
+    path('region/<int:pk>/', RegionInformation.as_view(), name="region_information"),
+    path('fruit/', Fruits.as_view(), name="fruit_list"),
+    path('fruit/<int:pk>/', FruitInformation.as_view(), name="fruit_information"),
 ]
