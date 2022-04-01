@@ -19,13 +19,13 @@
     </div>
     <div class="cabecalho-menu">
       <div class="cabecalho-menu-item">
-        <a href="https://api-fruitlibrary.herokuapp.com/">Início</a>
+        <a class ="hvr-grow" href="https://api-fruitlibrary.herokuapp.com/">Início</a>
       </div>
       <div class="cabecalho-menu-item">
-        <a href="{% url 'region_list' %}">API</a>
+        <a class ="hvr-grow" href="https://api-fruitlibrary.herokuapp.com/api_root">API</a>
       </div>
       <div class="cabecalho-menu-item">  
-        <a  href="https://github.com/amandacbarreto/fruitlibrary-api.git">Repositório Github</a>
+        <a  class ="hvr-grow" href="https://github.com/amandacbarreto/fruitlibrary-api.git">Repositório Github</a>
       </div> 
     </div>
   </header>
@@ -53,16 +53,16 @@
         </div>  
         
         <div class="resultado-desafio">
-            <h1>API Desenvolvida</h1>
-            <p>Para consultas gerais (GET) ou criação (PUT):</p>
+            <h1><a href="https://api-fruitlibrary.herokuapp.com/api_root">Api desenvolvida</a></h1>
+            <p>Consultas gerais (GET) ou criação de elementos (PUT):</p>
             <ul>
-              <li><a href="{% url 'region_list' %}">{% url 'region_list' %}</a> para regiões</li>
-              <li><a href="{% url 'fruit_list' %}">{% url 'fruit_list' %}</a> para frutas</li>
+              <li><a class="link-api" href="{% url 'region_list' %}">{% url 'region_list' %}</a>   para regiões</li>
+              <li><a href="{% url 'fruit_list' %}">{% url 'fruit_list' %}</a>   para frutas</li>
             </ul>
-            <p>Para consulta específica (GET), atualização (UPDATE) ou exclusão (DELETE) de elementos específicos:</p><br/>
+            <p>Consulta (GET), atualização (UPDATE) ou exclusão (DELETE) de elementos específicos:</p><br/>
             <ul>
-              <li><a href="{% url 'region_list' %}">{% url 'region_list' %}id</a> para regiões</li>
-              <li><a href="{% url 'fruit_list' %}">{% url 'fruit_list' %}id</a> para frutas</li>
+              <li><a href="{% url 'region_list' %}">{% url 'region_list' %}id</a>   para regiões</li>
+              <li><a href="{% url 'fruit_list' %}">{% url 'fruit_list' %}id</a>   para frutas</li>
             </ul>
         </div>
 

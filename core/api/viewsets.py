@@ -10,6 +10,8 @@ from rest_framework import status
 from rest_framework import mixins
 from rest_framework import generics
 
+from rest_framework import viewsets
+
 class Regions(APIView):
     """
     List all regions, or create a new region (post method).
@@ -84,5 +86,13 @@ class FruitInformation(mixins.RetrieveModelMixin,
     def delete(self, request, *args, **kwargs):
         return self.destroy(request, *args, **kwargs)
 
-def index_api(request):
+class RegionViewSet(viewsets.ModelViewSet):
+    serializer_class = RegionSerializer
+    queryset = Region.objects.all()
+
+class FruitViewSet(viewsets.ModelViewSet):
+    serializer_class = FruitSerializer
+    queryset = Fruit.objects.all()
+
+def index(request):
     return render(request, 'index.html')
