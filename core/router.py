@@ -13,10 +13,7 @@ route.register(r'fruits', fruitlibraryviewsets.FruitViewSet, basename="Fruits")
 
 urlpatterns = [
     
-    path('api_root/', include(route.urls)),
+    path('api/', include(route.urls)),
     path('', index),
-    path('region/', Regions.as_view(), name="region_list"),
-    path('region/<int:pk>/', RegionInformation.as_view(), name="region_information"),
-    path('fruit/', Fruits.as_view(), name="fruit_list"),
-    path('fruit/<int:pk>/', FruitInformation.as_view(), name="fruit_information"),
+    
 ]
